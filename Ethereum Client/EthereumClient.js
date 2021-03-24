@@ -11,7 +11,7 @@ mongoose.Promise = require('bluebird');
 
 var Web3 = require('web3');
 web3 = new Web3(new Web3.providers.HttpProvider(""));
-var HDWalletProvider = require("truffle-hdwallet-provider");
+var HDWalletProvider = require("@truffle/hdwallet-provider");
 
 var quiet=false;
 var DBConfig="";
