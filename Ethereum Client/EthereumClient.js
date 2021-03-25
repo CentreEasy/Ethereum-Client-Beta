@@ -217,7 +217,7 @@ function call(functionName, parameters = [], contractValue,fromAddress=null) {
 }
 
 function getMainHdWallet(){
-    var hdWallet = new HDWalletProvider(network.seed);
+    var hdWallet = new HDWalletProvider({mnemonic: {phrase: network.seed}, providerOrUrl: network.host});
     let log = console.log;
     console.log = function() {};
     let address = hdWallet.getAddress(0);
